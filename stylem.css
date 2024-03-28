@@ -3,6 +3,11 @@
     --seccol: #0e0d0d;
     --grad: #4bfdd3d0;
 }
+@font-face {
+    font-family: Consolas;
+    src: url(consolas.woff2);
+}
+
 *{box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -41,7 +46,7 @@ body{
         top: 0;
         backdrop-filter: blur(20px);
         background-color: #0e0d0d88;
-        height: 7dvh;
+        height: 7svh;
         z-index: 99;
         overflow: hidden;
      
@@ -104,7 +109,7 @@ body{
     }
     
     nav ul li{
-        height: 10dvh;
+        height: 10svh;
         cursor: pointer;
     }
     
@@ -126,7 +131,7 @@ nav li a{
     display: grid;
     gap: 1em;
     width: 100dvw;
-    height: 100dvh;
+    height: 100svh;
     grid-template-rows: 40% 60%;
     background-color: var(--seccol);
     overflow: hidden;
@@ -166,7 +171,7 @@ nav li a{
 
 .about{
     display: flex;
-    height: 100dvh;
+    height: 100svh;
     width: 100dvw;
     background: url(background1.png);
     align-items: center;
@@ -184,7 +189,7 @@ nav li a{
    backdrop-filter: blur(10px);
    box-shadow: 0 8px 32px rgba(255, 253, 253, 0.3);
    width: 90dvw;
-   height: 90dvh;
+   height: 90svh;
    border-radius: 20px;
 }
 
@@ -237,7 +242,7 @@ nav li a{
 
 .contact{
     display: flex;
-    height: 100dvh;
+    height: 100svh;
     width: 100dvw;
     align-items: center;
     justify-content: center;

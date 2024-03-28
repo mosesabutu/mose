@@ -4,6 +4,11 @@
     --seccol: #0e0d0d;
     --grad: #4bfdd3d0;
 }
+@font-face {
+    font-family: Consolas;
+    src: url(consolas.woff2);
+}
+
 *{box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -30,7 +35,7 @@ overflow-y: auto;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--grad);
+    background: linear-gradient( to bottom,  rgba(240, 248, 255, 0.267) , var(--seccol) ,  var(--grad));
     border-radius: 6px;
     
   }

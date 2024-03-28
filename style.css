@@ -7,7 +7,6 @@
     font-family: Consolas;
     src: url(consolas.woff2);
 }
-
 *{box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -36,24 +35,25 @@ body{
  margin: 0;   
  background-color: var(--seccol);
  width: 100dvw;
- overflow-x: hidden;
+ 
 }
 
  .header{
         position: fixed;
         width: 100dvw;
-        height: 10dvh;
+        height: 10svh;
         top: 0;
         backdrop-filter: blur(20px);
         background-color: #0e0d0d88;
-        height: 7dvh;
+        height: 7svh;
         z-index: 99;
+        overflow: hidden;
      
         .favicon{
             position: fixed;
-            top: 1em;
-            left: 3em;
-            font-size: 1.4rem;
+            top: 1.5em;
+            left: 1em;
+            font-size: 1rem;
             color: var(--pricol);
             font-weight: bold;
             margin-left: 1em;
@@ -61,7 +61,6 @@ body{
             a{
                 text-decoration: none;
                 color: var(--pricol);
-                font-size: 1.2rem;
             }
         }
     
@@ -78,10 +77,13 @@ body{
         }
         #imenu{
             position: fixed;
-            top: 0.8em;
+            color: var(--pricol);
+            top: 0.6em;
             right: 3em;
+            font-size: 1em;
             padding: 3px;
-            z-index: 100;
+            font-weight: 900;
+
         }
     }
     nav{
@@ -102,11 +104,11 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
+        
     }
     
     nav ul li{
-        height: 10dvh;
+        height: 10svh;
         cursor: pointer;
     }
     
@@ -115,7 +117,7 @@ nav li a{
         padding:  0  25px;
         text-decoration: none;
         color: var(--pricol);
-        font-size: 1.7rem;
+        font-size: small;
         display: flex;
         align-items: center;
     }
@@ -125,34 +127,35 @@ nav li a{
 
 
 .contains{
-    display: flex;
-    gap: 5em;
+    display: grid;
+    gap: 1em;
     width: 100dvw;
-    height: 100%;
-    flex-direction: column;
+    height: 100svh;
+    grid-template-rows: 40% 60%;
     background-color: var(--seccol);
+    overflow: hidden;
 }
 
 .contains .section1 {
-    margin: 5em;
-    margin-top: 11em;
+    margin: 1em;
+    margin-top: 14em;
 }
 .contains .section1 h1{
     color: var(--pricol);
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 0.6em;
 }
 
 .contains .section1 h2{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--grad);
-
+    margin-bottom: 0.6em ;
     font-weight: normal;
 }
 .contains .section1 p{
     color: var(--pricol);
     font-weight: lighter;
-    width: 80%;
-    font-size: 1.2rem;
+    width: 90%;
 }
 .contains .section2{
     display: flex;
@@ -164,15 +167,23 @@ nav li a{
 }
 .contains .section2 img{
    height: 500px;
+
+}
+
+@media screen and (max-height: 800px) {
+    picture {
+        display: none;
+    }
 }
 
 .about{
     display: flex;
-    height: 100dvh;
+    height: 100svh;
     width: 100dvw;
     background: url(background1.png);
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
     
 }
 
@@ -185,21 +196,21 @@ nav li a{
    backdrop-filter: blur(10px);
    box-shadow: 0 8px 32px rgba(255, 253, 253, 0.3);
    width: 90dvw;
-   height: 90dvh;
+   height: 90svh;
    border-radius: 20px;
 }
 
 .headt{
     color: var(--grad);
-    font-size: 5rem;
+    font-size: 1rem;
 }
 
 .btext{
     color: var(--pricol);
     padding: 1.5em;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
-.about{
+#about{
     display: flex;
     height: 100dvh;
     width: 100dvw;
@@ -209,40 +220,39 @@ nav li a{
     
 }
 
-.about .contt{
+#about #contt{
     display: flex;
     flex-direction: column;
     justify-content: center;
-   background-color: #0e0d0d2d;
-   backdrop-filter: blur(10px);
-   box-shadow: 0 8px 32px rgba(255, 253, 253, 0.3);
-   width: 80%;
-   height: 80dvh;
-   border-radius: 20px;
-   
+    align-items: center;
+    background-color: #0e0d0d70;
+    box-shadow: 0 8px 32px rgba(255, 253, 253, 0.3);
+    width: 90%;
+    height: 85%;
+    border-radius: 10px;
 }
 
 .headt{
     color: var(--grad);
     font-size: 1rem;
     text-align: left;
-    padding: 0.2em;
-    margin-top: 1em;
+    padding: 0.7em;
 }
 
 .btext{
     color: var(--pricol);
     padding: 1em;
     text-align: left;
+    font-size: 0.7rem;
 }
 
 .contact{
     display: flex;
-    height: 100dvh;
+    height: 100svh;
     width: 100dvw;
     align-items: center;
     justify-content: center;
-    
+    overflow-y: hidden;
 }
 
 
@@ -250,13 +260,14 @@ nav li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 85%;
+    width: 90%;
     height: 80dvh;
+    margin-left: 1em;
 }
 
 .headtt{
     color: var(--grad); 
-    font-size: 5rem;  
+    font-size: 3rem;  
     text-align: left;
     
 }
@@ -264,7 +275,7 @@ nav li a{
 .textb{
     color: var(--pricol);
     text-align: left;
-    width: 70%;
+    width: 90%;
     font-size: 1em;
 }
 
