@@ -178,7 +178,7 @@ nav li a{
 
 .about{
     display: flex;
-    height: 100svh;
+    height: 100dvh;
     width: 100dvw;
     background: url(background1.png);
     align-items: center;
