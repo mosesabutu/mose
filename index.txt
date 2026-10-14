@@ -1,2 +1,4 @@
 Icons needed:
-moon, sun, close, menu. all dark and light mode.
+moon, sun, close, menu. all dark and light mode..
+
+I'll need fonts too
